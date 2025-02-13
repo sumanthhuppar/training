@@ -1,0 +1,23 @@
+body{
+    height: 100%;
+    
+}
+.container{
+    display: flex;
+    background-color: grey;
+    width: 1200px;
+    height: 500px;
+    justify-content: space-evenly;
+}
+
+.box{
+    background-color: aquamarine;
+    height: 130px;
+    width: 130px;
+    padding: 20px;
+    margin: 20px;
+    box-sizing: border-box;
+    font: bold;
+    font-size: x-large;
+    text-align: center;
+}
