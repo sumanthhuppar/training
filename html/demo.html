@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         tr, td {
+            /* border: 3px solid white; */
+            border-collapse: collapse;
+        }
+        table{
+            border: 2px solid black;
+            width: 50%;
+            text-align: center;
+            padding: 2px;
+            margin-bottom: 10px;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        tr, td, th{
+            background-color: aquamarine;
+            padding: 10px;
+            font-size: large;
+        }
+
+        caption{
+            font-size: larger;
+            padding-bottom: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container1{
+            display: flex;
+            justify-content: space-between;
+        }
+        .container1 table{
+            margin-left: 9px;
+        }
+        .container1 table caption{
+            text-decoration: underline;
+        }
+        .video{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        video{
+            height: 500px;
+            width: 500px;
+            border-radius: 100%;
+        }
+        .pdf{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .pdf object{
+            width: 50%;
+            height: 350px;
+        }
+
+        #h3:hover {
+            cursor: pointer;
+            color: blueviolet;
+        }
+        caption:hover{
+            color: rgb(0, 111, 72);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!--                                 day 1
+                                      HTML Forms
+    
+    -->
+
+    <!--Input types-->
+    <h1 style="text-align: center;">Input types</h1>
+    <a href="https://www.google.com" target="_parent">google</a>
+    <form action="login" target="_blank" autocomplete="on" >
+        <label for="input">Name :</label>
+        <input type="text" name="username" placeholder="Enter your username" required>
+        <p>date - <input type="date"></p>
+        <p>submit - <input type="submit" value="Submit"></p>
+        <p>check - <input type="checkbox" name="check"></p>
+        <p>password - <input type="password" name="password" placeholder="Enter your password"></p>
+        <p><label for="radio">enter</label> <input id="radio" type="radio"></p>
+        <p>button - <input type="button" value="Click me"></p>
+
+        <input type="button">
+        <input type="checkbox">
+        <input type="color">
+        <input type="date">
+        <input type="datetime-local">
+        <input type="email">
+        <input type="file">
+        <input type="hidden">
+        <input type="image">
+        <input type="month">
+        <input type="number">
+        <input type="password">
+        <input type="radio">
+        <input type="range">
+        <input type="reset">
+        <input type="search">
+        <input type="submit">
+        <input type="tel">
+        <input type="text">
+        <input type="time">
+        <input type="url">
+        <input type="week">
+
+        <!-- Select tag & Option tags-->
+        <h1 style="text-align: center;">Select & Option tags</h1>
+        <select name="cars" id="cars">
+            <option value="default" size="4" multiple>--select--</option>
+            <option value="car1">Swift</option>
+            <option value="car2">Baleno</option>
+            <option value="car3" selected>Glanza</option>
+            <option value="car4">Dzire</option>
+        </select>
+            <!-- Select multiple-->
+            <h1 style="text-align: center;">Select - multiple</h1>
+        <select id="cars" name="cars" size="4" multiple>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+          </select>
+
+          <!-- Text Area-->
+          <h1 style="text-align: center;">Text Area</h1>
+          <textarea name="message" rows="10" cols="15">
+            The cat was playing in the garden.
+            </textarea>
+
+            <!--data list-->
+            <h1 style="text-align: center;">Data list</h1>
+            <input list="browsers" name="browser">
+            <datalist id="browsers">
+                <option value="car"></option>
+                <option value="bike"></option>
+                <option value="bus"></option>
+            </datalist>
+    </form>
+
+    <!--                                            Day 2
+                                                HTML multimedia 
+    -->
+
+    <!--Html video tag-->
+    <h1 style="text-align: center;">HTML video tags</h1>
+    <div class="video">
+        <video width="320" height="240" controls autoplay muted>
+            <source src="video.mp4" type="video/mp4">
+            <source src="video.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+
+     <!--embedding a youtube video -->
+     <h1 style="text-align: center;">Embeding yt video</h1>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/IIf1CAh61BA?si=Rcaw3CYWiHsCQ3Ac" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen ></iframe>
+
+    <!-- HTML audio tag -->
+    <h1 style="text-align: center;">HTML audio tag</h1>
+    <audio controls autoplay>
+        <source src="audio.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- HTML Plugins -->
+
+     <!-- HTML Plugin to view PDF in same window -->
+     <h3 id="h3" style="text-align: center; font-family: Arial, Helvetica, sans-serif;color: chocolate;padding-bottom: 5px; text-decoration: underline;">HTML Plugin to view PDF</h3>
+      <div class="pdf">
+        <object data="C:/Users/Sumanth/Desktop/data_migration.pdf" type="application/pdf" width="100%" height="100%">
+            <p>Alternative text - include a link <a href="C:/Users/Sumanth/Desktop/data_migration.pdf">to the PDF!</a></p>
+        </object>
+      </div>
+
+    <!-- view pdf in next tab -->
+    <p><button><a href="C:/Users/Sumanth/Desktop/data_migration.pdf" target="_blank">View PDF</a></button></p>
+
+        <!-- HTML Table -->
+         <div class="container">
+         <table>
+            <caption>February Sales</caption>
+            <tr>
+                    <th>week 1</th>
+                    <th>week 2</th>
+                    <th>week 3</th>
+                    <th>week 4</th>
+            </tr>
+            <tr>
+                <td>34</td>
+                <td>256</td>
+                <td>541</td>
+                <td>987</td>
+            </tr>
+            <tr>
+                <td>34</td>
+                <td>256</td>
+                <td>541</td>
+                <td>987</td>
+            </tr>
+            <tr>
+                <td>34</td>
+                <td>256</td>
+                <td>541</td>
+                <td>987</td>
+            </tr>
+         </table>
+        </div>
+
+        <!-- colspan -->
+        <div class="container1">
+        <table>
+            <caption>Details</caption>
+            <tr>
+                <th colspan="2">Name</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>43</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>57</td>
+            </tr>
+        </table>
+        <table>
+            <caption>Time Table</caption>
+            <tr>
+                <th></th>
+                <th>2pm</th>
+                <th>3pm*</th>
+                <th>4pm</th>
+            </tr>
+            <tr>
+                <th>MON</th>
+                <td>3</td>
+                <td>2</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <th>TUE</th>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <th>WED</th>
+                <td>3</td>
+                <td>2</td>
+                <td>4</td>
+            </tr>
+        </table>
+        
+        <!-- row span -->
+         <table>
+            <caption>Contact</caption>
+            <tr>
+                <th>Name</th>
+                <td>Sumanth</td>
+            </tr>
+            <tr>
+                <th rowspan="3">Phone <br> numbers</th>
+                <td>+91 9353739028</td>
+            </tr>
+            <tr>
+                <td>+91 7353603392</td>
+            </tr>
+            <tr>
+                <td>+91 9448964370</td>
+            </tr>
+         </table>
+    </div>
+    <!-- html inside html using object tag -->
+    <object data="table.html" type=""></object>
+    <object data="table.html"></object>
+    </body>
+</html>
