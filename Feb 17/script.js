@@ -59,11 +59,23 @@
 
 // console.log(a);
 // var a= 10;
-console.log(add)
-console.log(a)
-function add(){
-    console.log(a+b);
-}
-add()
-var a =10;
-var b =20;
+// console.log(add)
+// console.log(a)
+// function add(){
+//     console.log(a+b);
+// }
+// add()
+// var a =10;
+// var b =20;
+
+
+var api_key = "https://api.restful-api.dev/objects";
+
+var promise = fetch(api_key);
+console.log(promise);
+
+promise.then((data) => {
+    console.log("this is data",data,"data ended here");
+});
+
+setTimeout(() => console.log(promise), 3000);
