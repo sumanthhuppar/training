@@ -56,7 +56,6 @@
 
 
 
-
 // console.log(a);
 // var a= 10;
 // console.log(add)
@@ -74,8 +73,20 @@ var api_key = "https://api.restful-api.dev/objects";
 var promise = fetch(api_key);
 console.log(promise);
 
-promise.then((data) => {
-    console.log("this is data",data,"data ended here");
+promise.then((response) => {
+    console.log(`this is HTTP response \n ${response.status}`)
+    return response.json();
+}).then((data) => {
+    console.log("this is data", data, "data ended here");
+    data.forEach(element => {
+        if (element.data) {
+            console.log(element.id + " --> " + element.name + " --> " + element.data.price);
+        } else {
+            console.log(element.id + " " + element.name + " (data is null)");
+        }
+    });
+}).catch((error) => {
+    console.error("Error fetching data:", error);
 });
 
-setTimeout(() => console.log(promise), 3000);
+// setTimeout(() => console.log(promise), 3000);
